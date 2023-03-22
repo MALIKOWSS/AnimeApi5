@@ -1,9 +1,9 @@
 package com.example.animeapi.di
 
-import com.example.animeapi.data.repositories.anime.AnimeRepositoryImpl
-import com.example.animeapi.data.repositories.manga.MangaRepositoryImpl
-import com.example.animeapi.domain.repositories.anime.AnimeRepository
-import com.example.animeapi.domain.repositories.manga.MangaRepository
+import com.example.data.repositories.anime.AnimeRepositoryImpl
+import com.example.data.repositories.manga.MangaRepositoryImpl
+import com.example.domain.repositories.anime.AnimeRepository
+import com.example.domain.repositories.manga.MangaRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

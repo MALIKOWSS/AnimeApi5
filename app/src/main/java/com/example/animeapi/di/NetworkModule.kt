@@ -1,11 +1,6 @@
 package com.example.animeapi.di
 
-import com.example.animeapi.data.remote.RetrofitClient
-import com.example.animeapi.data.remote.apiservices.anime.AnimeApiService
-import com.example.animeapi.data.repositories.anime.AnimeRepositoryImpl
-import com.example.animeapi.data.repositories.manga.MangaRepositoryImpl
-import com.example.animeapi.domain.repositories.anime.AnimeRepository
-import com.example.animeapi.domain.repositories.manga.MangaRepository
+import com.example.data.remote.RetrofitClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
