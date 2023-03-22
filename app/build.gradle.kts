@@ -14,11 +14,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.youtube"
+    namespace = "com.example.animeapi"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.youtube"
+        applicationId = "com.example.animeapi"
         minSdk = 23
         targetSdk = 33
         versionCode = 1

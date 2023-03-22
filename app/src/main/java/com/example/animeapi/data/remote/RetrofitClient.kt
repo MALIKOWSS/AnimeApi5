@@ -2,7 +2,6 @@ package com.example.animeapi.data.remote
 
 import com.example.animeapi.data.remote.apiservices.anime.AnimeApiService
 import com.example.animeapi.data.remote.apiservices.manga.MangaApiService
-import com.example.animeapi.data.remote.apiservices.singin.SignInApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -21,16 +20,15 @@ class RetrofitClient {
         .build()
 
     private val retrofitClient = Retrofit.Builder()
-        .baseUrl("https://kitsu.io/api/")
+        .baseUrl("https://kitsu.io/api/edge/")
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
 
-    private fun provideLoggingInterceptor() = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+    private fun provideLoggingInterceptor() =
+        HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
     fun provideAnimeApiService() = retrofitClient.create(AnimeApiService::class.java)
 
     fun provideMangaApiService() = retrofitClient.create(MangaApiService::class.java)
-
-    fun provideSingInApiService() = retrofitClient.create(SignInApiService::class.java)
 }
