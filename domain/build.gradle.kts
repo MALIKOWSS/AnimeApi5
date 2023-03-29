@@ -1,12 +1,16 @@
 plugins {
-    id("java-library")
-    id("org.jetbrains.kotlin.jvm")
+    Plugins.apply {
+        id(javaLibrary)
+        id(kotlinJvm)
+    }
 }
+
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation("javax.inject:javax.inject:1")
+    implementation(Dependencies.Coroutines.coroutines)
+    implementation(Dependencies.Inject.inject)
 }
+
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
